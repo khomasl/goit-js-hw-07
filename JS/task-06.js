@@ -5,8 +5,9 @@
 
 const validationInput = document.querySelector('#validation-input');
 
-validationInput.addEventListener("focusout", () => 
-   validationInput.value.length === Number(validationInput.getAttribute('data-length')) ? 
-    validationInput.setAttribute('class', "valid") : 
-    validationInput.setAttribute('class', "invalid")
-)
+const setClass = () => 
+validationInput.value.length === Number(validationInput.getAttribute('data-length')) ? 
+ validationInput.setAttribute('class', "valid") : 
+ validationInput.setAttribute('class', "invalid")
+
+validationInput.addEventListener("focusout", setClass);

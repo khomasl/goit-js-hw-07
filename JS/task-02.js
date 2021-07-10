@@ -8,9 +8,7 @@ const ingredients = [
 ];
 //  Для каждого элемента массива инградиентов создает отдельный li
 //  после чего вставит все li за одну операцию в список ul.ingredients
-ingredients.forEach(elem => {
-  const li = document.createElement('li');
-  li.textContent = elem;
-  const ul = document.querySelector('#ingredients');
-  ul.appendChild(li);
-})
+
+const ul = document.querySelector('#ingredients');
+const markup = ingredients.reduce(((str, item) => str + `<li>${item}</li>`),'');
+ul.insertAdjacentHTML('afterbegin', markup);

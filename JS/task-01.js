@@ -7,6 +7,5 @@ console.log(`В списке ${arrCategories.length} категории.`);
 
 // Виводить контент всіх заголовків h2 в списку
 // і к-ть елементів списку кожної з категорій
-const arrChildren = [...arrCategories].map(elem => elem.children);
-arrChildren.forEach(elem => 
-    console.log(` Категория: ${elem[0].textContent} \n Количество элементов: ${elem[1].childElementCount}`));
+arrCategories.forEach(elem => 
+    console.log(` Категория: ${elem.firstElementChild.textContent} \n Количество элементов: ${elem.lastElementChild.childElementCount}`));

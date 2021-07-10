@@ -23,7 +23,7 @@ const createBoxes = (amount) => {
         const size = 30 + 10 * i;
         str +=  `<div style="height: ${size}px; width: ${size}px; background-color: ${rndCol()}"></div>`
     }
-    boxesDiv.innerHTML = str;
+    boxesDiv.insertAdjacentHTML('afterbegin', str);
 }
 
 //const destroyBoxes = () => [...boxesDiv.children].forEach(div => div.remove())
