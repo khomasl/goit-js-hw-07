@@ -26,7 +26,8 @@ const createBoxes = (amount) => {
     boxesDiv.innerHTML = str;
 }
 
-const destroyBoxes = () => [...boxesDiv.children].forEach(div => div.remove())
+//const destroyBoxes = () => [...boxesDiv.children].forEach(div => div.remove())
+const destroyBoxes = () => boxesDiv.innerHTML = "";
 
 renderBtn.addEventListener('click', createBoxes);
 destroyBtn.addEventListener('click', destroyBoxes);
