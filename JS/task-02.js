@@ -17,4 +17,4 @@ const arrLi = ingredients.map((elem) => {
   return li;
 })
 
-ul.append(arrLi[0], arrLi[1], arrLi[2], arrLi[3], arrLi[4], arrLi[5]);
+ul.append(...arrLi);
